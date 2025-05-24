@@ -1,52 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Avinash Kola</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .topbar {
-            background: #1f1f1f;
-            padding: 12px 24px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: 600;
-            color: #f0f0f0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .pdf-container {
-            position: absolute;
-            top: 48px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        embed {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-            background: #202020;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avinash Kola | SDET Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    header {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    header h1 { font-size: 32px; }
+    header p { font-size: 16px; color: #ccc; }
+    .download-btn {
+      margin-top: 12px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover { background: #005f99; }
+    section {
+      padding: 40px;
+      max-width: 960px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #1e1e1e;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    ul { padding-left: 20px; }
+    footer {
+      text-align: center;
+      background: #1e1e1e;
+      color: #ccc;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <div class="topbar">Avinash Kola</div>
-    <div class="pdf-container">
-        <embed src="resume.pdf" type="application/pdf" />
-    </div>
+
+<header>
+  <h1>Avinash Kola</h1>
+  <p>SDET | Java, Python, Selenium, Appium | CI/CD | AWS Certified</p>
+  <p><a href="mailto:avinashkola29@gmail.com">avinashkola29@gmail.com</a> | (203) 710-6888 | <a href="https://www.linkedin.com/in/avinash-kola-b7a71a169/">LinkedIn</a></p>
+  <a href="resume.pdf" class="download-btn" download>📄 Download Resume</a>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <div class="card">
+    <p>Software Development Engineer in Test (SDET) with 2 years of experience in testing web, mobile, and microservice applications. I am skilled in building and maintaining test automation frameworks, API and UI testing, and validating complex e-commerce and healthcare flows. Proficient in Java, Python, Selenium, Appium, TestNG, Postman, and REST Assured. Hands-on experience with CI/CD pipelines using Jenkins, Docker, Kubernetes, and Devtron. Demonstrated expertise in performance, load, and security testing. Adept in Agile methodologies and cross-functional collaboration. AWS certified with knowledge of cloud services including EC2, RDS, and S3.</p>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Languages & Tools:</strong> Java, Python, Selenium, Appium, TestNG, REST Assured, Postman, Jenkins, Git, GitHub</li>
+      <li><strong>Cloud & DevOps:</strong> AWS (EC2, RDS, S3, IAM), Docker, Kubernetes, Devtron</li>
+      <li><strong>Testing Types:</strong> Performance, Security, Load, Stress</li>
+      <li><strong>Databases & APIs:</strong> Firebase Realtime Database, REST APIs</li>
+      <li><strong>Agile Tools:</strong> Jira, TestRail</li>
+      <li><strong>CI/CD & Automation:</strong> Jenkins Pipelines, Selenium Grid, Automation Frameworks</li>
+      <li><strong>Mobile Testing:</strong> Appium for Android and iOS</li>
+    </ul>
+  </div>
+
+  <h2>Professional Experience</h2>
+  <div class="card">
+    <h3>Software Development Engineer in Test (SDET), Tata 1MG, Gurgaon, India (Feb 2022 – Aug 2023)</h3>
+    <ul>
+      <li>Spearheaded the testing strategy for critical cart-to-payment workflows across web and mobile platforms, enhancing reliability and streamlining the checkout process for millions of users.</li>
+      <li>Architected and maintained scalable automation frameworks using Java, Selenium, TestNG, and REST Assured, enabling continuous regression coverage and reducing manual testing efforts by over 70%.</li>
+      <li>Integrated automation test suites into Jenkins CI/CD pipelines, leveraging Docker and Kubernetes to ensure faster deployments, consistent builds, and reduced downtime during releases.</li>
+      <li>Designed and executed robust test plans for Cart 2.0 features including automated cart creation, one-click checkout, and order placement, reducing cart completion time by over 80% and boosting system efficiency.</li>
+      <li>Led performance benchmarking, load testing, and security validation using real-time pharmacy service scenarios, ensuring high availability and resilience for over 5 million active users.</li>
+      <li>Partnered with engineering and DevOps teams to fine-tune backend service performance, implementing mock services and schema validation to improve API reliability and simulate real-world traffic conditions.</li>
+      <li>Actively engaged in Agile ceremonies, contributing to sprint planning, backlog refinement, and QA strategy discussions to ensure smooth delivery and alignment of test activities with evolving product roadmaps.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>What A Trip: Cross-Platform App Development and Firebase-Django Integration</h3>
+    <ul>
+      <li>Engineered cross-platform mobile and web applications backed by Firebase, enabling real-time updates, secure user authentication, and push notification support for seamless user engagement.</li>
+      <li>Built a dynamic Django web portal integrated with Firebase, allowing real-time syncing of travel data across devices and ensuring a responsive user experience.</li>
+    </ul>
+    <h3>Django Apps Deployment on AWS</h3>
+    <ul>
+      <li>Orchestrated end-to-end deployment of Django applications on AWS using EC2, RDS, and S3, achieving scalable, fault-tolerant backend infrastructure.</li>
+      <li>Enhanced application performance and security by configuring IAM roles and setting up CloudFront distributions to ensure efficient content delivery and secure access controls.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>Master’s in Computer Science</strong>, University of New Haven, West Haven, CT, USA (Aug 2023 – May 2025)</p>
+    <p><strong>Bachelor’s in Computer Science and Engineering</strong>, Amity University Haryana, Haryana, India (Jul 2018 – Jun 2022)</p>
+  </div>
+
+  <h2>Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>AWS Solutions Architect</li>
+      <li>Certified Professional Selenium Tester</li>
+      <li>International Software Testing Qualifications Board</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  © 2025 Avinash Kola. All rights reserved.
+</footer>
+
 </body>
 </html>
